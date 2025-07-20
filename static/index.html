@@ -158,14 +158,14 @@
   document.querySelector("form button").addEventListener("click", async () => {
     const message = userInput.value.trim();
     if (!message) return;
-    userInput.value = "";
+
 
     // Append user message to chat window
     appendMessage("user", message);
     history.push({ role: "user", content: message });
-
+    userInput.value = "";
     try {
-      const res = await axios.post("http://127.0.0.1:5000/chat", {
+      const res = await axios.post("/chat", {
         message,
         history
       });

@@ -10,6 +10,7 @@ import requests
 
 load_dotenv(override=True)
 
+BASE_URL = os.getenv("BASE_URL", "http://127.0.0.1:7000")
 
 def push(text):
     requests.post(
