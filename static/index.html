@@ -144,6 +144,7 @@
       .send-text {
         display: none;
       }
+
       .bi-send {
         margin-left: 0 !important;
       }
@@ -169,7 +170,9 @@
       <form id="chat-form">
         <input type="text" id="user-input" placeholder="Hey I am Uma's Chat Assistant. Ask me anything"
           autocomplete="off" />
-        <button type="button"><p class="send-text">Send</p><i class="bi bi-send ms-2"></i></button>
+        <button type="button">
+          <p class="send-text">Send</p><i class="bi bi-send ms-2"></i>
+        </button>
       </form>
     </div>
   </div>
@@ -181,7 +184,13 @@
   const userInput = document.getElementById("user-input");
   const chatWindow = document.getElementById("chat-window");
   let history = [];
-  document.querySelector("form button").addEventListener("click", async () => {
+
+  chatForm.addEventListener("submit", handleSend);
+  document.querySelector("form button").addEventListener("click", handleSend);
+
+
+  async function handleSend(e) {
+    e.preventDefault()
     const message = userInput.value.trim();
     if (!message) return;
 
@@ -204,8 +213,7 @@
       console.error(error);
     }
 
-  });
-
+  }
   function appendMessage(sender, text) {
     const p = document.createElement("p");
     p.classList.add("message", sender);
