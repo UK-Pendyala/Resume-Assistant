@@ -235,7 +235,11 @@
     p.classList.add("message", sender);
     p.innerText = text;
     chatWindow.appendChild(p);
-    chatWindow.scrollTop = chatWindow.scrollHeight;
+
+    requestAnimationFrame(() => {
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+    });
+    // chatWindow.scrollTop = chatWindow.scrollHeight;
   }
 </script>
 
