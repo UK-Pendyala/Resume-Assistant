@@ -1,0 +1,4 @@
+Software engineer and AWS-certified Solutions Architect originally from Corvallis where I finished my Masters from Oregon State University, now moved to Illonois. I enjoy building full-stack apps (React/Node) that actually get 
+used, like the one I made for speed golfers that tracks their rounds across real courses. Outside of code, you’ll find me smashing birdies on the badminton court, 
+frying up something spicy in the kitchen, or singing along to whatever’s playing (badly but confidently). Big fan of French fries, not a fan of bugs in production.
+
